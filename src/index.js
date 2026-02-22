@@ -42,6 +42,7 @@ async function registerCommands(client) {
   ];
 
   const rest = new REST({ version: '10' }).setToken(TOKEN);
+  console.log("TOKEN EXISTS?", !!TOKEN);
 
   await rest.put(
     Routes.applicationCommands(client.user.id),
